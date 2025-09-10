@@ -7,7 +7,11 @@ python -m venv env
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 .\env\Scripts\activate
-PARA QUE ACTUALICE LA PAG: asignamos la variable: $env:FLASK_DEBUG = "True" flask run
+
+pip install flask
+
+PARA QUE ACTUALICE LA PAG: asignamos la variable: $env:FLASK_DEBUG = "True" 
+flask run
 
 deactivate
 ----------------------------------------
