@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+  <form method="post" action="{{ url_for('index') }}" novalidate>
+    <div class="mb-3">
+      <label class="form-label">Digite su cédula (tu usuario)</label>
+      <input type="text" inputmode="numeric" pattern="\d*" class="form-control form-control-lg" name="cc" placeholder="Solo números" required>
+      <div class="form-text">Debe tener entre 8 y 10 dígitos.</div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">¿Que usuario necesita?</label>
+      <select class="form-select form-select-lg" name="sistema" required>
+        <option value="CASINO SINERGY">CASINO SINERGY</option>
+        <option value="TALENTO HUMANO">TALENTO HUMANO</option>
+        <option value="POLIDEPORTIVO">POLIDEPORTIVO</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg w-100">Generar contraseña</button>
+  </form>
+{% endblock %}
