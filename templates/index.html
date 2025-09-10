@@ -3,7 +3,7 @@
   <form method="post" action="{{ url_for('index') }}" novalidate>
     <div class="mb-3">
       <label class="form-label">Digite su cédula (tu usuario)</label>
-      <input type="text" inputmode="numeric" pattern="\d*" class="form-control form-control-lg" name="cc" placeholder="Solo números" required>
+      <input type="text" inputmode="numeric" pattern="\d*" class="form-control form-control-lg" name="cc" placeholder="Digite numero" required>
       <div class="form-text">Debe tener entre 8 y 10 dígitos.</div>
     </div>
     <div class="mb-3">
@@ -11,8 +11,16 @@
       <select class="form-select form-select-lg" name="sistema" required>
         <option value="CASINO SINERGY">CASINO SINERGY</option>
         <option value="TALENTO HUMANO">TALENTO HUMANO</option>
-        <option value="POLIDEPORTIVO">POLIDEPORTIVO</option>
+        <option value="POLIDEPORTIVO">POLIDEPORTIVO Y GYM</option>
       </select>
+    </div>
+    <div>
+      <label class="form-label">Link de ingresos:</label>
+      <ul>
+        <li><a href="https://digital.tecnoglass.net/auth/login/?next=/" target="_blank">CASINO SINERGY<a></li>
+        <li><a href="https://talentohumano.tecnoglass.net/" target="_blank">TALENTO HUMANO</a></li>
+        <li><a href="https://services.eswindows.com/auth" target="_blank">POLIDEPORTIVO Y GYM</a></li>
+      </ul>
     </div>
     <button type="submit" class="btn btn-primary btn-lg w-100">Generar contraseña</button>
   </form>
